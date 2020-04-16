@@ -7,9 +7,10 @@ import Grid from "@material-ui/core/Grid";
 
 const AllAppointments = () => {
   const [appointmentInfo, setAppointmentInfo] = useState([]);
-  const [filteredItems, setfilteredItems] = useState(null);
+
   useEffect(() => {
-    fetch("http://localhost:4200/showAllAppointments")
+    // fetch("http://localhost:4200/showAllAppointments")
+    fetch("http://red-mongo.herokuapp.com/showAllAppointments")
       .then((res) => res.json())
       .then((data) => {
         setAppointmentInfo(data);
@@ -39,12 +40,12 @@ const AllAppointments = () => {
       Cell: (props) => {
         return (
           <>
-            <select>
+            <select className="btnSmall">
               <option value="pending">Pending</option>
               <option value="sone">Done</option>
               <option value="Cancelled">Cancelled</option>
             </select>
-            <button>Edit</button>
+            <button className="btnSmall">Edit</button>
           </>
         );
       },
@@ -120,6 +121,7 @@ const AllAppointments = () => {
 
       <ReactTable
         data={tableData}
+        noDataText="Please Wait... Data Loading "
         columns={tableColumns}
         defaultPageSize={12}
         pageSizeOptions={[5, 10, 20]}

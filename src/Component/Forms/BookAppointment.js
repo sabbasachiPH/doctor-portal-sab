@@ -44,7 +44,8 @@ const BookAppointment = (props) => {
     };
     console.log(time, patientName, phoneNumber, emailAddress, appointmentDate);
     console.log(appointmentDetail);
-    fetch("http://localhost:4200/addAppointment", {
+    // fetch("http://localhost:4200/addAppointment", {
+    fetch("http://red-mongo.herokuapp.com/addAppointment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

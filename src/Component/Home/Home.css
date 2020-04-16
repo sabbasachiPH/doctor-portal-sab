@@ -38,6 +38,13 @@ body {
   cursor: pointer;
   font-size: 1.2rem;
 }
+.btnSmall {
+  background: linear-gradient(to right, #19d3ae 10%, #0fcfec 90%);
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5%;
+  text-decoration: none;
+}
 .home-img-right {
   height: 350px;
   width: 600px;

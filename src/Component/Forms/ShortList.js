@@ -14,7 +14,8 @@ const ShortList = () => {
   const [appointmentInfo, setAppointmentInfo] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4200/showAllAppointments")
+    // fetch("http://localhost:4200/showAllAppointments")
+    fetch("http://red-mongo.herokuapp.com/showAllAppointments")
       .then((res) => res.json())
       .then((data) => {
         setAppointmentInfo(data);
@@ -35,7 +36,7 @@ const ShortList = () => {
       Cell: (props) => {
         return (
           <>
-            <select>
+            <select className="btnSmall">
               <option value="pending">Pending</option>
               <option value="sone">Done</option>
               <option value="Cancelled">Cancelled</option>
@@ -91,6 +92,7 @@ const ShortList = () => {
               <h4>Appointments</h4>
               <ReactTable
                 data={tableData}
+                noDataText="Please Wait... Data Loading "
                 columns={tableColumns}
                 defaultPageSize={12}
                 pageSizeOptions={[5, 10, 20]}
