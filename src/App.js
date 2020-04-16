@@ -2,7 +2,13 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import MyRoute from "./Component/Nav/MyRoute";
+import * as firebase from "firebase/app";
+import "firebase/auth";
 import { AuthContextProvider } from "./Component/Forms/useAuth";
+import firebaseConfig from "./firebase.config";
+
+
+firebase.initializeApp(firebaseConfig);
 
 function App() {
   return (
