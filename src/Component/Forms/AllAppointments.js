@@ -55,7 +55,7 @@ const AllAppointments = () => {
   ];
 
   return (
-    <div>
+    <div className="container">
       <div className="appointment-nav">
         <Nav></Nav>
       </div>
@@ -123,7 +123,7 @@ const AllAppointments = () => {
         data={tableData}
         noDataText="Please Wait... Data Loading "
         columns={tableColumns}
-        defaultPageSize={12}
+        defaultPageSize={5}
         pageSizeOptions={[5, 10, 20]}
         filterable
       ></ReactTable>
