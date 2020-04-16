@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
+  /* background: linear-gradient(to right, #ffffff 60%, #3a4256 40%); */
+  background: inherit;
+  padding-right: 30px;
+  
+}
+.nav-item {
+  text-decoration: none;
+  padding: 20px;
+  color: #ffffff;
+  font-size: 18px;
+  font-size: 18px;
+  mix-blend-mode: difference;
+}
