@@ -10,7 +10,7 @@ const AllAppointments = () => {
 
   useEffect(() => {
     // fetch("http://localhost:4200/showAllAppointments")
-    fetch("http://red-mongo.herokuapp.com/showAllAppointments")
+    fetch("https://red-mongo.herokuapp.com/showAllAppointments")
       .then((res) => res.json())
       .then((data) => {
         setAppointmentInfo(data);
