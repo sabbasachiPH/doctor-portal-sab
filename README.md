@@ -1,7 +1,7 @@
 <h1>Doctor's Portal</h1>
 <h4>Online appointment booking System</h4>
 
-*Project Details: *
+**Project Details:**
 In this project we build the full featured appointment booking System. Anyone can book their appointment easily withour mooving physically from one place to another.
 
 <h2>Main Features</h2>
